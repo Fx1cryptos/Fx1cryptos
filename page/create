@@ -1,0 +1,26 @@
+import React from "react";
+
+export default function CreatePage() {
+  return (
+    <div style={{ padding: "2rem", textAlign: "center", background: "#0f0f0f", color: "white" }}>
+      <h1>🎨 Become an FX1 Creator</h1>
+      <p style={{ maxWidth: "700px", margin: "0 auto" }}>
+        Step into the future of digital creation. As an FX1 Creator, you can:
+        <br />• Design with world-class AI art tools.
+        <br />• Mint your work as NFTs instantly on-chain.
+        <br />• Earn crypto every time your art is collected or traded.
+      </p>
+      <h2 style={{ marginTop: "2rem" }}>🔥 Recommended AI Art Generators</h2>
+      <ul style={{ listStyle: "none", padding: 0 }}>
+        <li>🎯 <b>DALL·E 3</b> – Best for imaginative illustrations.</li>
+        <li>📸 <b>MidJourney</b> – Best for photorealism and mood.</li>
+        <li>🌌 <b>Leonardo.AI</b> – Best for concept art and fantasy worlds.</li>
+        <li>🎬 <b>Runway ML</b> – Best for video-to-art animations.</li>
+        <li>🖌️ <b>Stable Diffusion XL</b> – Best for custom styles.</li>
+      </ul>
+      <a href="/mint" style={{ display: "inline-block", padding: "1rem 2rem", marginTop: "2rem", background: "#ff0055", color: "white", borderRadius: "8px", textDecoration: "none" }}>
+        🚀 Start Creating
+      </a>
+    </div>
+  );
+}
