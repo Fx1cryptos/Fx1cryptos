@@ -1,0 +1,12 @@
+{
+  "name": "fx1-digital-hubs",
+  "version": "1.0.0",
+  "description": "Blockchain NFT, Digital Fashion, Onchain Art by FX1 Digital Hubs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack --mode production"
+  },
+  "author": "FX1 Digital Hubs",
+  "license": "MIT"
+}
