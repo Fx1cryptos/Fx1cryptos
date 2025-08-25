@@ -1,0 +1,13 @@
+packages/
+└─ ui/
+   ├─ package.json
+   ├─ README.md
+   ├─ LICENSE
+   ├─ src/
+   │  ├─ fx1-button.js
+   │  ├─ fx1-chip.js
+   │  ├─ fx1-social-bar.js
+   │  └─ index.js
+   ├─ dist/
+   │  └─ index.js
+   └─ .npmignore
