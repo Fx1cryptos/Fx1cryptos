@@ -1,0 +1,64 @@
+// src/api/x_api_integration.js
+require('dotenv').config();
+const { TwitterApi } = require('twitter-api-v2');
+
+const client = new TwitterApi({
+  appKey: process.env.X_API_KEY,
+  appSecret: process.env.X_API_SECRET,
+  accessToken: process.env.X_ACCESS_TOKEN,
+  accessSecret: process.env.X_ACCESS_TOKEN_SECRET,
+});
+
+const bearerClient = new TwitterApi(process.env.X_BEARER_TOKEN);
+
+// Post an NFT drop from @fx1_hubs or @digita_wardrobe
+async function postNFTDrop(nftName, marketplaceUrl, account = 'fx1_hubs') {
+  try {
+    const tweetText = `New ${nftName} dropped on Zora! Mint now: ${marketplaceUrl} #FX1Runway #Web3Fashion @${account}`;
+    const tweet = await client.v2.tweet(tweetText);
+    console.log(`Posted from @${account}:`, tweet.data);
+    return tweet.data;
+  } catch (error) {
+    console.error(`Error posting from @${account}:`, error);
+    throw error;
+  }
+}
+
+// Fetch recent posts with #FX1Runway or mentions of @fx1_hubs/@digita_wardrobe
+async function fetchCommunityPosts() {
+  try {
+    const query = '#FX1Runway OR from:fx1_hubs OR from:digita_wardrobe';
+    const posts = await bearerClient.v2.search(query);
+    const results = [];
+    for await (const post of posts) {
+      results.push({
+        id: post.id,
+        text: post.text,
+        author_id: post.author_id,
+        created_at: post.created_at,
+      });
+      if (results.length >= 10) break; // Limit to 10 posts
+    }
+    console.log('Fetched posts:', results);
+    return results;
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    throw error;
+  }
+}
+
+// FX1 Flux chatbot recommendations based on X posts
+async function getFluxRecommendations() {
+  try {
+    const posts = await fetchCommunityPosts();
+    const recommendation = posts.length
+      ? `Trending on X: "${posts[0].text}" Style a similar look in FX1 Digital Runway!`
+      : 'No trends yet. Try a neon-punk outfit in FX1 Digital Runway!';
+    return recommendation;
+  } catch (error) {
+    console.error('Error in Flux recommendations:', error);
+    return 'Create a cosmic style in FX1 Digital Runway!';
+  }
+}
+
+module.exports = { postNFTDrop, fetchCommunityPosts, getFluxRecommendations };
