@@ -44,3 +44,66 @@ Drop me a DM on any platform above 👆
 ---
 
 🖤 *FX1 Digital Hubs – Creating the Future, Onchain.*
+<!-- HEADER / BANNER -->
+<p align="center">
+  <img src="https://your-banner-link-here.png" alt="FX1 Digital Hubs Banner" width="100%">
+</p>
+
+<h1 align="center">🌐 FX1 Digital Hubs</h1>
+<p align="center">
+  <b>Blockchain Artist • NFT Creator • Digital Fashion Innovator • Web3 Growth Strategist</b>  
+</p>
+
+---
+
+## 🎨 About Me  
+Hi, I’m **FX1 Digital Hubs (FX1)** – a **one-man creative hub** shaping the future of **art, blockchain, and fashion in the metaverse.**  
+
+✨ My work blends:  
+- 🖼️ **NFT Art** → Blockchain-secured creativity  
+- 👗 **Onchain Fashion** → Wearables & metaverse couture  
+- 🌍 **Web3 Growth** → Strategy for decentralized projects  
+- 🪙 **Token Economy ($FDH)** → My native ecosystem token  
+
+---
+
+## 🔗 Connect With Me  
+
+<p align="center">
+  <a href="https://fx1hubs.short.gy"><img src="https://img.shields.io/badge/Website-000?style=for-the-badge&logo=About.me&logoColor=white" /></a>
+  <a href="https://farcaster.xyz/fx1-faucet"><img src="https://img.shields.io/badge/Farcaster-6A4DFE?style=for-the-badge&logoColor=white" /></a>
+  <a href="https://t.me/fx1digitalhubs"><img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" /></a>
+  <a href="https://x.com/fx1_hubs?s=21"><img src="https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white" /></a>
+  <a href="https://discord.gg/gAQFRfdu"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://zora.co/@fx1_hubs"><img src="https://img.shields.io/badge/Zora-000000?style=for-the-badge&logoColor=white" /></a>
+  <a href="https://www.tiktok.com/@fx1_hubs?_t=ZS-8z9q5FXQJjl&_r=1"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
+</p>
+
+---
+
+## 🪙 My Token – $FDH  
+
+<p align="center">
+  <a href="https://rainbow.me/token/base/0x1f85705d939Bb6Fa1AEbE99d7105AdCee75CE380">
+    <img src="https://img.shields.io/badge/$FDH-Token-blueviolet?style=for-the-badge&logo=ethereum&logoColor=white" />
+  </a>
+</p>
+
+---
+
+## ✨ Vision  
+> Building a **digital-first metaverse culture** where **art, fashion, and blockchain** converge.  
+Empowering **creators and communities** with **onchain expression.**
+
+---
+
+## 🤝 Collaborate  
+💡 Open to partnerships, collaborations, and metaverse projects.  
+📩 DM me on any platform above 👆  
+
+---
+
+<p align="center">
+  🖤 FX1 Digital Hubs – *Creating the Future, Onchain.*
+</p>
+
