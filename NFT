@@ -1,0 +1,6 @@
+<section class="fx1-3d-bg">
+  <div class="fx1-container">
+    <h2 class="fx1-title">🎨 Featured NFT Artworks</h2>
+    <div id="fx1-nft-gallery" class="fx1-gallery"></div>
+  </div>
+</section>
