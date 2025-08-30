@@ -1,0 +1,52 @@
+/**
+ * FX1 NFT Showcase Loader
+ * Fetch NFTs from Zora + Manifold APIs
+ * Render into a 3D gallery grid
+ */
+
+const ZORA_API = "https://zora.co/api/feeds/fx1_hubs"; 
+const MANIFOLD_API = "https://api.manifold.xyz/v1/users/fx1hubs/creations"; 
+
+async function fetchNFTs() {
+  const gallery = document.getElementById("fx1-nft-gallery");
+  gallery.innerHTML = "<p>Loading NFTs...</p>";
+
+  try {
+    const [zoraRes, manifoldRes] = await Promise.all([
+      fetch(ZORA_API).then(r => r.json()),
+      fetch(MANIFOLD_API).then(r => r.json())
+    ]);
+
+    const zoraNFTs = zoraRes?.feed?.map(n => ({
+      title: n?.nft?.metadata?.name,
+      image: n?.nft?.metadata?.image,
+      url: `https://zora.co/collect/${n?.nft?.contractAddress}/${n?.nft?.tokenId}`
+    })) || [];
+
+    const manifoldNFTs = manifoldRes?.map(n => ({
+      title: n?.title,
+      image: n?.metadata?.image,
+      url: `https://manifold.xyz/@fx1hubs/${n?.slug}`
+    })) || [];
+
+    const allNFTs = [...zoraNFTs, ...manifoldNFTs].slice(0, 12);
+
+    gallery.innerHTML = "";
+    allNFTs.forEach(nft => {
+      const card = document.createElement("div");
+      card.className = "fx1-nft-card";
+      card.innerHTML = `
+        <img src="${nft.image}" alt="${nft.title}" />
+        <h4>${nft.title || "Untitled"}</h4>
+        <a href="${nft.url}" target="_blank" class="fx1-link">View on Chain</a>
+      `;
+      gallery.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error("NFT Fetch Error:", err);
+    gallery.innerHTML = "<p>⚠️ Error loading NFTs</p>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", fetchNFTs);
